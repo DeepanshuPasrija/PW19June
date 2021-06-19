@@ -1,0 +1,14 @@
+CREATE (t:trainer{name:"Deepanshu"})-[rel:LIKES]->(f:food{type:"pasta"})
+
+MATCH (t:trainer) RETURN t
+
+CREATE (t:trainer{name:"Batman"})-[rel:LIKES]->(f:food{type:"pizza"})
+
+MATCH (t:trainer) RETURN t
+
+MATCH (t:trainer{name:"Batman"})-[rel:LIKES]->(f:food{type:"pasta"}) RETURN t,rel,f
+
+MATCH (t:trainer{name:"Batman"})-[rel:LIKES]->(f:food{type:"pizza"}) RETURN t,rel,f
+
+MATCH (t:trainer)-[rel:LIKES]->(f:food) RETURN t,rel,f
+
